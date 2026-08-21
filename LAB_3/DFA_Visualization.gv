@@ -1,0 +1,14 @@
+digraph DFA_Visualization {
+	graph [rankdir=LR]
+	"" [label="" shape=plaintext]
+	q1 [label=q1 shape=doublecircle]
+	q0 [label=q0 shape=circle]
+	q_dead [label=q_dead shape=circle]
+	"" -> q0 [label=""]
+	q0 -> q1 [label=lowercase]
+	q0 -> q_dead [label=other]
+	q1 -> q1 [label=lowercase]
+	q1 -> q_dead [label=other]
+	q_dead -> q_dead [label=lowercase]
+	q_dead -> q_dead [label=other]
+}
